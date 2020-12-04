@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+
+<title>Calculator</title>
+</head>
+<body>
+<center>
+<form method="get" action="desti.php">
+Enter Subtotal:<br><br>
+<input type="number" name="st"><br>
+Enter Gratuity Rate(in %):<br><br>
+<input type="number" name="grate"><br><br>
+
+<input type="submit" value="submit">
+</form>
+</center>
+</body>
+</html>
+
+
+
+<?php
+$sub_total = $_GET['st'];
+$gratuity_rate=$_GET['grate'];
+$gratuity=($sub_total*$gratuity_rate)/100;
+$total=$sub_total+$gratuity;
+echo("Gratuity= $ $gratuity ");
+echo("Total= $total");
+?>
+
